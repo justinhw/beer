@@ -14,3 +14,7 @@
 
 > copy geocodes from '<path_to>/geocodes.csv' DELIMITERS ',' CSV;
 
+### Working locally
+
+> source env/bin/activate
+
