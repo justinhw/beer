@@ -1,9 +1,11 @@
 import os
-from beer import app
-from beer.models.beer import Beer
-from beer.models.base.base import Base
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
+
+from beer import app
+from beer.models.base import Base
+from beer.models.beer import Beer
 
 engine = create_engine(os.environ['DATABASE_URL'])
 Base.prepare(engine, reflect=True)

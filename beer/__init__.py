@@ -1,6 +1,5 @@
 import os
 
-from beer.models.base.base import Base
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 
