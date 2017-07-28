@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Float, DateTime
-from base import Base
+from base.base import Base
 
 # need to finish this so that we can write to the db via sqlalchemy
 class Beer(Base):
