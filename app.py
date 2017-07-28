@@ -2,8 +2,9 @@ import os
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
-# from models.beer import Beer
-from sqlalchemy.ext.automap import automap_base
+from models.beer import Beer
+from models.base import Base
+
 from sqlalchemy.orm import Session
 
 
@@ -11,14 +12,8 @@ app = Flask(__name__)
 app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
-
-Base = automap_base()
-
 engine = create_engine(os.environ['DATABASE_URL'])
 Base.prepare(engine, reflect=True)
-
-Beer = Base.classes.beers
-
 session = Session(engine)
 
 

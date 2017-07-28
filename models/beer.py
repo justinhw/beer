@@ -1,18 +1,18 @@
-from sqlalchemy.ext.declarative import declarative_base
-
-Base = declarative_base()
+from sqlalchemy.ext.automap import automap_base
+from sqlalchemy import Column, Integer, String, Float, DateTime
+from models.base import Base
 
 class Beer(Base):
     __tablename__ = 'beers'
 
-    id = db.Column(db.Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
     # brewer_id=
-    name = db.Column(db.String())
+    name = Column(String())
     # category_id=
     # styled_id=
-    abv = db.Column(db.Float)
-    description = db.Column(db.String())
-    last_updated = db.Column(db.DateTime())
+    abv = Column(Float)
+    description = Column(String())
+    last_updated = Column(DateTime())
 
     def __init__(self, name, abv, description, last_updated):
         self.name = name
