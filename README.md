@@ -16,5 +16,6 @@
 
 ### Working locally
 
+> pip install
 > source env/bin/activate
 
