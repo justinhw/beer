@@ -19,3 +19,8 @@ def beer_world():
 def find_beer(id):
     beer = session.query(Beer).filter(Beer.id == id).first()
     return beer.description
+
+@app.route('/beer/<id>/recommendation')
+def get_beer_recommendation(id):
+    beer = session.query(Beer).filter(Beer.id == id).first()
+    return beer.id
