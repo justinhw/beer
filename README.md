@@ -16,6 +16,11 @@
 
 ### Working locally
 
-> pip install
-> source env/bin/activate
+1) Create a virtualenv if you do not have one https://virtualenv.pypa.io/en/stable/installation/
+2) cd into your project directory and run
+> virtualenv venv
+3) Activate the venv
+> source venv/bin/activate
+4) Install dependencies
+> pip install -r requirements.txt
 
