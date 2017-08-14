@@ -28,4 +28,4 @@
 > APP_SETTINGS = config.DevelopmentConfig
 > DATABASE_URL = <the url>
 7) Make sure PyCharm is using the correct Python interpreter
-8) Run! 
+8) Run!
